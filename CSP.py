@@ -536,7 +536,7 @@ class CSP(object):
         while row < self.size:
             while column < self.size:
                 change = False
-                print("Wiersz: " + str(row) + " Kolumna: " + str(column))
+                # print("Wiersz: " + str(row) + " Kolumna: " + str(column))
                 # print("Dziedzina: " + str(self.domain))
                 # print("Wybrane kolory: " + str(self.chosen_colors_matrix[row][column]))
                 color_set = np.setdiff1d(np.setdiff1d(self.available_domains[row][column], np.zeros(self.domain.size, dtype=int)), self.chosen_colors_matrix[row][column])
@@ -601,7 +601,7 @@ class CSP(object):
         while column < self.size:
             while row < self.size:
                 change = False
-                print("Wiersz: " + str(row) + " Kolumna: " + str(column))
+                # print("Wiersz: " + str(row) + " Kolumna: " + str(column))
                 # print("Dziedzina: " + str(self.domain))
                 # print("Wybrane kolory: " + str(self.chosen_colors_matrix[row][column]))
                 color_set = np.setdiff1d(
@@ -622,7 +622,7 @@ class CSP(object):
                     break
                 if self.color_matrix[row][column] == 0 or change is False:
                     # Wykonanie nawrotu
-                    print("Nawrót dla: " + str(row) + " " + str(column))
+                    # print("Nawrót dla: " + str(row) + " " + str(column))
                     self.recurrence_number += 1
                     self.chosen_colors_matrix[row][column] = np.zeros(self.domain.size, dtype=int)
                     self.color_matrix[row][column] = 0
