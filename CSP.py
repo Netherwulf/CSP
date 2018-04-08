@@ -213,7 +213,7 @@ class CSP(object):
         while row < self.size:
             while column < self.size:
                 change = False
-                print("Wiersz: " + str(row) + " Kolumna: " + str(column))
+                # print("Wiersz: " + str(row) + " Kolumna: " + str(column))
                 # print("Dziedzina: " + str(self.domain))
                 # print("Wybrane kolory: " + str(self.chosen_colors_matrix[row][column]))
                 color_set = np.setdiff1d(np.setdiff1d(self.available_domains[row][column], np.zeros(self.domain.size, dtype=int)), self.chosen_colors_matrix[row][column])
